@@ -1,7 +1,7 @@
 salt-DALMP
 ==========
 
-Install DALMP with salt
+Installs DALMP (https://github.com/nbari/DALMP) with salt
 
 
 On master run:
