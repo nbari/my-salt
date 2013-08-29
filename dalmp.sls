@@ -1,4 +1,5 @@
-https://github.com/nbari/DALMP:
+DALMP:
   git.latest:
-    - rev: master
+    -name: http://github.com/nbari/DALMP
     - target: /usr/local/share/dalmp
+    - rev: master
