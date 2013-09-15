@@ -13,7 +13,9 @@ my-salt
 
 - Does a git clone or a pull, and later updates all git submodules.
 
+**mysql**
 
+- For creating a mysql sandbox and test some cluster configurations
 
 
 
