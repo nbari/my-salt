@@ -23,5 +23,9 @@ On master run:
 
     salt '*' state.highstate
 
+To apply locally:
+
+    salt-call state.highstate --local
+
 
 More help on how to use this files can be found in: http://docs.saltstack.com/topics/tutorials/walkthrough.html
