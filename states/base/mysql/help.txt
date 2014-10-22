@@ -1,0 +1,32 @@
+salt "mysql_master" mysql.user_create 'replica' '%' 'slavepass'
+salt "mysql_master" mysql.grant_add 'REPLICATION SLAVE' '*.*' 'replica' '%'
+
+mysqldump --all-databases --single-transaction --hex-blob --master-data=2 > /dump.sql
+
+A parting tip: Sometimes errors occur in replication. For example, if you
+accidentally change a row of data on your slave. If this happens, fix the data,
+then run:
+
+STOP SLAVE;SET GLOBAL SQL_SLAVE_SKIP_COUNTER = 1;START SLAVE;
+
+salt "mysql_34*" mysql.query mysql "STOP SLAVE;SET GLOBAL SQL_SLAVE_SKIP_COUNTER = 1;START SLAVE;"
+
+
+Setup mater:
+
+salt "mysql_master" state.sls mysql.setup_dbadmin
+# get dump
+salt "mysql_master" cp.push /dump.sql.gz
+mv /var/cache/salt/master/minions/mysql_master/files/dump.sql.gz .
+
+RESET MASTER, RESET SLAVE
+
+1. salt -N group1 service.stop mysql-server
+2. salt -N group1 cmd.run 'rm -rf /var/db/mysql/*'
+3. salt -N group1 service.start mysql-server
+4. salt -N group1 state.sls mysql.send_dump
+
+
+Preparing masters
+1 salt -C "S@192.168.1.31 or S@192.168.1.32 or S@192.168.1.33" state.sls mysql.setup_masters
+2 salt -C "S@192.168.1.31 or S@192.168.1.32 or S@192.168.1.33" state.sls mysql.send_dump
