@@ -36,3 +36,5 @@
 
 testuser:
   user.absent
+    - purge: True
+    - force: True
