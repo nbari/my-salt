@@ -101,10 +101,11 @@ Get pillar items:
 
     # salt '*' pillar.items
 
-Set roles from the master at the command line
+Set [grains](http://salt.readthedocs.org/en/latest/topics/targeting/grains.html#matching-grains-in-the-top-file) from the master at the command line
 
     # salt 'minion-ID' grains.setval roles development
     # salt 'minion-ID' grains.setval roles '[development, production]'
+    # salt 'minion-ID' grains.setval node_type test
 
 Ping minion's based on a role:
 
