@@ -100,3 +100,7 @@ To ensure that the minions have the new pillar data, issue a command to them ask
 Get pillar items:
 
     # salt '*' pillar.items
+
+Set roles from the master at the command line
+
+    # salt 'minion-ID' grains.setval roles [roleA, roleB]
