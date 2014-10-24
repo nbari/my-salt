@@ -103,4 +103,5 @@ Get pillar items:
 
 Set roles from the master at the command line
 
-    # salt 'minion-ID' grains.setval roles [roleA, roleB]
+    # salt 'minion-ID' grains.setval roles '[development]'
+    # salt 'minion-ID' grains.setval roles '[development, production]'
