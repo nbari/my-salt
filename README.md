@@ -114,3 +114,10 @@ Ping minion's based on a role:
 State Testing
 
     # salt -C 'G@node_type:test' state.highstate test=True
+
+Keep minions awake
+------------------
+
+On the salt master set a cron with this:
+
+    # 0 * * * * /usr/local/bin/salt --async '*' test.ping > /dev/null 2>&1
