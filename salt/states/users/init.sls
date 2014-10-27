@@ -2,8 +2,7 @@
 {% set os = salt['grains.filter_by']({
     'Debian': {'shell': '/bin/bash'},
     'FreeBSD': {'shell': '/bin/csh'},
-    'default': {'shell': '/bin/sh'}
-}) %}
+}, default='Debian') %}
 
 # loop over all users presented by pillar:
 {% for username, details in pillar.get('users', {}).items() %}
