@@ -110,3 +110,7 @@ Set [grains](http://salt.readthedocs.org/en/latest/topics/targeting/grains.html#
 Ping minion's based on a role:
 
     # salt -C 'G@roles:development' test.ping
+
+State Testing
+
+    # salt -C 'G@node_type:test' state.highstate test=True
