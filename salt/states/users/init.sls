@@ -1,8 +1,8 @@
 # select the shell based on the operating system
 {% set os = salt['grains.filter_by']({
-    'Ubuntu': {'shell': '/bin/bash'},
+    'Debian': {'shell': '/bin/bash'},
     'FreeBSD': {'shell': '/bin/csh'},
-    'default': 'FreeBSD',
+    'default': {'shell': '/bin/sh'}
 }) %}
 
 # loop over all users presented by pillar:
