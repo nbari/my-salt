@@ -121,3 +121,10 @@ Keep minions awake
 On the salt master set a cron with this:
 
     # 0 * * * * /usr/local/bin/salt --async '*' test.ping > /dev/null 2>&1
+
+Salt Masterless
+===============
+
+To test your states
+
+    salt-call --local --file-root=/salt/states state.highstate -l debug
