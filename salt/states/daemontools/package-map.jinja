@@ -1,0 +1,17 @@
+{% set package_table = {
+    'Debian':  {'daemontools': 'daemontools'},
+    'Ubuntu':  {'daemontools': 'daemontools'},
+    'CentOS':  {'daemontools': 'daemontools'},
+    'Fedora':  {'daemontools': 'daemontools'},
+    'RedHat':  {'daemontools': 'daemontools'},
+    'Amazon':  {'daemontools': 'daemontools'},
+    'Gentoo':  {'daemontools': 'daemontools'},
+    'Mint':    {'daemontools': 'daemontools'},
+    'FreeBSD': {'daemontools': 'daemontools',
+                'service': 'svscan',
+                'service_dir': '/var/service'}
+} %}
+
+{% if grains['os'] in package_table %}
+    {% set pkgs = package_table[grains['os']] %}
+{% endif %}

@@ -1,0 +1,17 @@
+{% set package_table = {
+    'Debian':  {'php': 'php'},
+    'Ubuntu':  {'php': 'php'},
+    'CentOS':  {'php': 'php'},
+    'Fedora':  {'php': 'php'},
+    'RedHat':  {'php': 'php'},
+    'Amazon':  {'php': 'php'},
+    'Gentoo':  {'php': 'app-admin/php'},
+    'Mint':    {'php': 'php'},
+    'FreeBSD': {'php': 'php56',
+                'config-path': '/usr/local/etc',
+                'fpm_service': 'php-fpm'}
+} %}
+
+{% if grains['os'] in package_table %}
+    {% set pkgs = package_table[grains['os']] %}
+{% endif %}

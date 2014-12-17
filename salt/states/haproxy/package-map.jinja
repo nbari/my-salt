@@ -1,0 +1,16 @@
+{% set package_table = {
+    'Debian':  {'haproxy': 'haproxy'},
+    'Ubuntu':  {'haproxy': 'haproxy'},
+    'CentOS':  {'haproxy': 'haproxy'},
+    'Fedora':  {'haproxy': 'haproxy'},
+    'RedHat':  {'haproxy': 'haproxy'},
+    'Amazon':  {'haproxy': 'haproxy'},
+    'Gentoo':  {'haproxy': 'haproxy'},
+    'Mint':    {'haproxy': 'haproxy'},
+    'FreeBSD': {'haproxy': 'haproxy',
+                'config-path': '/usr/local/etc'}
+} %}
+
+{% if grains['os'] in package_table %}
+    {% set pkgs = package_table[grains['os']] %}
+{% endif %}

@@ -1,0 +1,17 @@
+{% set package_table = {
+    'Debian':  {'wackamole': 'wackamole'},
+    'Ubuntu':  {'wackamole': 'wackamole'},
+    'CentOS':  {'wackamole': 'wackamole'},
+    'Fedora':  {'wackamole': 'wackamole'},
+    'RedHat':  {'wackamole': 'wackamole'},
+    'Amazon':  {'wackamole': 'wackamole'},
+    'Gentoo':  {'wackamole': 'wackamole'},
+    'Mint':    {'wackamole': 'wackamole'},
+    'FreeBSD': {'wackamole': 'wackamole',
+                'config-path': '/usr/local/etc',
+                'service_dir': '/var/service'}
+} %}
+
+{% if grains['os'] in package_table %}
+    {% set pkgs = package_table[grains['os']] %}
+{% endif %}

@@ -1,0 +1,16 @@
+{% set package_table = {
+    'Debian':  {'spread': 'spread'},
+    'Ubuntu':  {'spread': 'spread'},
+    'CentOS':  {'spread': 'spread'},
+    'Fedora':  {'spread': 'spread'},
+    'RedHat':  {'spread': 'spread'},
+    'Amazon':  {'spread': 'spread'},
+    'Gentoo':  {'spread': 'spread'},
+    'Mint':    {'spread': 'spread'},
+    'FreeBSD': {'spread': 'spread',
+                'config-path': '/usr/local/etc'}
+} %}
+
+{% if grains['os'] in package_table %}
+    {% set pkgs = package_table[grains['os']] %}
+{% endif %}
