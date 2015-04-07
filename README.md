@@ -128,3 +128,22 @@ Salt Masterless
 To test your states
 
     salt-call --local --file-root=/salt/states state.highstate -l debug
+
+Mines
+=====
+
+Refresh pillar:
+
+    salt '*' saltutil.refresh_pillar
+
+Push both module and pillar data to all minions:
+
+    salt '*' saltutil.sync_all
+
+Confirm mine_functions are recognized by all minions:
+
+    salt '*' config.get mine_functions
+
+Minions update mine data at startup and every mine_interval minutes thereafter. Force 15 minions at a time to run mine.update:
+
+    salt '*' -b 15 mine.update
