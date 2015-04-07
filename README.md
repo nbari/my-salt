@@ -147,3 +147,7 @@ Confirm mine_functions are recognized by all minions:
 Minions update mine data at startup and every mine_interval minutes thereafter. Force 15 minions at a time to run mine.update:
 
     salt '*' -b 15 mine.update
+
+Update mine:
+
+    salt '*' mine.update
