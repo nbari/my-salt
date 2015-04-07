@@ -151,3 +151,9 @@ Minions update mine data at startup and every mine_interval minutes thereafter. 
 Update mine:
 
     salt '*' mine.update
+
+Get mines:
+
+    salt '*' mine.get 'minion-3' test.ping
+
+    salt "haproxy1*" mine.get 'node_type:riak' status.uptime grain
