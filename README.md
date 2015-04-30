@@ -72,7 +72,7 @@ Accept by name:
 
     # salt-key -a salt-minion-host
 
-Accept all kezs:
+Accept all keys:
 
     # salt-key -A
 
