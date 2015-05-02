@@ -39,11 +39,11 @@ Update Apt's Package Indexes
 
 Install the Salt-Master package
 
-    # apt-get --yes -q install salt-master
+    # sudo apt-get --yes -q install salt-master
 
 Install The Salt-Minion package
 
-    # apt-get --yes -q install salt-minion
+    # sudo apt-get --yes -q install salt-minion
 
 
 more details: http://bencane.com/2013/09/03/getting-started-with-saltstack-by-example-automatically-installing-nginx/
