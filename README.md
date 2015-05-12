@@ -129,6 +129,10 @@ To test your states
 
     salt-call --local --file-root=/salt/states state.highstate -l debug
 
+Apply "recipie" on master:
+
+    salt-call --local --file-root /salt/states --pillar-root /salt/pillars state.sls users -l debug
+
 Mines
 =====
 
