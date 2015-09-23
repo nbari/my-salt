@@ -167,6 +167,17 @@ Get mines:
 Debug
 -----
 
+salt (from master)
+salt-call (from minion)
+
 On the minion run:
 
     salt-call -l trace --local state.highstate
+
+Check to see if you can catch more information about the error using "debug" mode:
+
+    salt-call -l debug state.highstate
+
+Clear the cache on the minion completely:
+
+    rm -rf /var/cache/salt/minion/files/base/*
