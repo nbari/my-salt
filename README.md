@@ -161,3 +161,12 @@ Get mines:
     salt '*' mine.get 'minion-3' test.ping
 
     salt "haproxy1*" mine.get 'node_type:riak' status.uptime grain
+
+
+
+Debug
+-----
+
+On the minion run:
+
+    salt-call -l trace --local state.highstate
