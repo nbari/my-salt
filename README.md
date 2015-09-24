@@ -168,6 +168,7 @@ Debug
 -----
 
 salt (from master)
+
 salt-call (from minion)
 
 On the minion run:
