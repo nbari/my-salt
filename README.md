@@ -182,3 +182,11 @@ Check to see if you can catch more information about the error using "debug" mod
 Clear the cache on the minion completely:
 
     rm -rf /var/cache/salt/minion/files/base/*
+
+
+Update
+------
+
+Update all FreeBSD minions:
+
+    salt -C 'G@os:FreeBSD' cmd.run 'pkg update && pkg upgrade -y && service salt_minion restart'
