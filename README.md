@@ -190,3 +190,15 @@ Update
 Update all FreeBSD minions:
 
     salt -C 'G@os:FreeBSD' cmd.run 'pkg update && pkg upgrade -y && service salt_minion restart'
+
+
+Kill salt-call
+==============
+
+Some times salt-call loops, to kill it:
+
+     pgrep -f salt-call | xargs ps -o pcpu -p | awk 'NR>1 {printf("%.0f", $1)}'
+
+using test:
+
+    test `pgrep -f salt-call | xargs ps -o pcpu -p | awk 'NR>1 {printf("%.0f", $1)}'` -gt 90 && pkill -f salt-call
