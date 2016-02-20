@@ -202,3 +202,9 @@ Some times salt-call loops, to kill it:
 using test:
 
     test `pgrep -f salt-call | xargs ps -o pcpu -p | awk 'NR>1 {printf("%.0f", $1)}'` -gt 90 && pkill -f salt-call
+
+
+Get IP
+=======
+
+    salt -C "G@node_type:my_nodes*" network.ip_addrs
