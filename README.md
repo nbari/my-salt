@@ -162,7 +162,9 @@ Get mines:
 
     salt "haproxy1*" mine.get 'node_type:riak' status.uptime grain
 
+Get IP's:
 
+    salt -C "G@node_type:HAProxy_VPC" mine.get 'node_type:my-nodes' network.ip_addrs grain
 
 Debug
 -----
