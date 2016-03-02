@@ -210,3 +210,11 @@ Get IP
 =======
 
     salt -C "G@node_type:my_nodes*" network.ip_addrs
+
+
+Startup states
+==============
+
+To initialize/boostrap a minion at boot time, on the minion conf add:
+
+    startup_states: highstate
