@@ -33,6 +33,7 @@ hostname -F /etc/hostname
 mkdir /etc/salt
 echo ${INSTANCE_ID} > /etc/salt/minion_id
 echo "node_type: ${TAG_VALUE}" > /etc/salt/grains
+echo "startup_states: highstate" > /etc/salt/minion
 
 apt-get --yes -q install salt-minion
 ```
