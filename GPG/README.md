@@ -19,7 +19,7 @@ your application. Be sure to back up your gpg directory someplace safe!
 
 To retrieve public key:
 
-    gpg --homedir /etc/salt/gpgkeys --armor --export <KEY-NAME> > exported_pubkey.gpg
+    gpg --homedir /salt/gpgkeys --armor --export <KEY-NAME> > exported_pubkey.gpg
 
 Import public key on your local machine so that you can encrypt:
 
