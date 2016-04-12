@@ -44,19 +44,18 @@ The pillar now will be:
 aws:
     keyid: ABC
     key: |
-	  -----BEGIN PGP MESSAGE-----
-	  Version: GnuPG v1
+		-----BEGIN PGP MESSAGE-----
 
-	  hQEMAweRHKaPCfNeAQf9GLTN16hCfXAbPwU6BbBK0unOc7i9/etGuVc5CyU9Q6um
-	  QuetdvQVLFO/HkrC4lgeNQdM6D9E8PKonMlgJPyUvC8ggxhj0/IPFEKmrsnv2k6+
-	  cnEfmVexS7o/U1VOVjoyUeliMCJlAz/30RXaME49Cpi6No2+vKD8a4q4nZN1UZcG
-	  RhkhC0S22zNxOXQ38TBkmtJcqxnqT6YWKTUsjVubW3bVC+u2HGqJHu79wmwuN8tz
-	  m4wBkfCAd8Eyo2jEnWQcM4TcXiF01XPL4z4g1/9AAxh+Q4d8RIRP4fbw7ct4nCJv
-	  Gr9v2DTF7HNigIMl4ivMIn9fp+EZurJNiQskLgNbktJGAeEKYkqX5iCuB1b693hJ
-	  FKlwHiJt5yA8X2dDtfk8/Ph1Jx2TwGS+lGjlZaNqp3R1xuAZzXzZMLyZDe5+i3RJ
-	  skqmFTbOiA==
-	  =Eqsm
-	  -----END PGP MESSAGE-----
+		hQEMA0TFuAYDisHXAQf/fFWEk0Hl8YYWjkRlPvbo2RmSJ47t5tWJeUAZAPhYyUyd
+		Zgq37/j6X28UENPMBD/XR1SeqXM1N1j8Su9ETiduZ5fKOfzMj8Jjwx5+ZFqsrXVD
+		Flkv3zNe6BhwdX2g3ahu9wKyRgeW8S9RO5FmZTVkPu/ECAuF9+I+gajwl2AkiGe7
+		gHZZzvklt2HsAUey1q0xVWICwO4d3AaqOUQ/rz84QkG/9/p+9UaK51XK46/hjCzT
+		Q44cJqBwGiaa6Yaok9Nnlvsi+y/MDyD67HKbKMy++WItz1X3yQ/KAP9k8qw+0tPW
+		zzMAcypoGyX+72ba7gEDau06jadeUnFMYMj9Ext7z9JjAfrPKxUZCtmjmEnNlwGc
+		4BfWnhmRBP3m7BWqgdAwHjkH3b3CaD/pDvwNxuLL8UvIrLEjA1JvdaCWLkP64avp
+		6tOQDkUvbrJH5meQJ94FV/9JDwPJH4MVI3F24nv2Y5hOMB7u
+		=RuWu
+		-----END PGP MESSAGE-----
 ```
 
 * Notice the ``#!yaml|gpg`` on top of the file
