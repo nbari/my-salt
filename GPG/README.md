@@ -14,6 +14,12 @@ Create keypair (on master or replicate later your keys):
     chmod 0700 /salt/gpgkeys
     gpg --gen-key --homedir /salt/gpgkeys
 
+Create a symlink:
+
+    ln -s /salt/gpgkeys /usr/local/etc/salt/gpgkeys
+
+or to avoid the symlinc just use ``/usr/local/etc/salt/gpgkeys``
+
 Do not supply a password for your keypair, and use a name that makes sense for
 your application. Be sure to back up your gpg directory someplace safe!
 
