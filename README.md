@@ -218,3 +218,10 @@ Startup states
 To initialize/boostrap a minion at boot time, on the minion conf add:
 
     startup_states: highstate
+
+Order of execution
+==================
+
+To view the order in which Salt states are applied:
+
+    salt minion-id state.show_sls example
