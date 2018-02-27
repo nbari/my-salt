@@ -8,6 +8,8 @@ Install gnupg:
 
     pkg install gnupg
 
+> probably you will also need python-gnupg
+
 Create keypair (on master or replicate later your keys):
 
     mkdir /salt/gpgkeys
@@ -22,6 +24,8 @@ or to avoid the symlinc just use ``/usr/local/etc/salt/gpgkeys``
 
 Do not supply a password for your keypair, and use a name that makes sense for
 your application. Be sure to back up your gpg directory someplace safe!
+
+> In some linux you may need to install rngd https://nbari.com/post/gpg/
 
 To retrieve public key:
 
