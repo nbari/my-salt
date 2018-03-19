@@ -54,18 +54,18 @@ The pillar now will be:
 aws:
     keyid: ABC
     key: |
-		-----BEGIN PGP MESSAGE-----
+      -----BEGIN PGP MESSAGE-----
 
-		hQEMA0TFuAYDisHXAQf/fFWEk0Hl8YYWjkRlPvbo2RmSJ47t5tWJeUAZAPhYyUyd
-		Zgq37/j6X28UENPMBD/XR1SeqXM1N1j8Su9ETiduZ5fKOfzMj8Jjwx5+ZFqsrXVD
-		Flkv3zNe6BhwdX2g3ahu9wKyRgeW8S9RO5FmZTVkPu/ECAuF9+I+gajwl2AkiGe7
-		gHZZzvklt2HsAUey1q0xVWICwO4d3AaqOUQ/rz84QkG/9/p+9UaK51XK46/hjCzT
-		Q44cJqBwGiaa6Yaok9Nnlvsi+y/MDyD67HKbKMy++WItz1X3yQ/KAP9k8qw+0tPW
-		zzMAcypoGyX+72ba7gEDau06jadeUnFMYMj9Ext7z9JjAfrPKxUZCtmjmEnNlwGc
-		4BfWnhmRBP3m7BWqgdAwHjkH3b3CaD/pDvwNxuLL8UvIrLEjA1JvdaCWLkP64avp
-		6tOQDkUvbrJH5meQJ94FV/9JDwPJH4MVI3F24nv2Y5hOMB7u
-		=RuWu
-		-----END PGP MESSAGE-----
+      hQEMA0TFuAYDisHXAQf/fFWEk0Hl8YYWjkRlPvbo2RmSJ47t5tWJeUAZAPhYyUyd
+      Zgq37/j6X28UENPMBD/XR1SeqXM1N1j8Su9ETiduZ5fKOfzMj8Jjwx5+ZFqsrXVD
+      Flkv3zNe6BhwdX2g3ahu9wKyRgeW8S9RO5FmZTVkPu/ECAuF9+I+gajwl2AkiGe7
+      gHZZzvklt2HsAUey1q0xVWICwO4d3AaqOUQ/rz84QkG/9/p+9UaK51XK46/hjCzT
+      Q44cJqBwGiaa6Yaok9Nnlvsi+y/MDyD67HKbKMy++WItz1X3yQ/KAP9k8qw+0tPW
+      zzMAcypoGyX+72ba7gEDau06jadeUnFMYMj9Ext7z9JjAfrPKxUZCtmjmEnNlwGc
+      4BfWnhmRBP3m7BWqgdAwHjkH3b3CaD/pDvwNxuLL8UvIrLEjA1JvdaCWLkP64avp
+      6tOQDkUvbrJH5meQJ94FV/9JDwPJH4MVI3F24nv2Y5hOMB7u
+      =RuWu
+      -----END PGP MESSAGE-----
 ```
 
 * Notice the ``#!yaml|gpg`` on top of the file
