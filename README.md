@@ -60,6 +60,9 @@ Also useful are:
 
     # salt-run manage.down
 
+# Copy a file to a minion
+
+    # salt-cp "minion-*" file.txt /path/to/file.txt
 
 Accepting the Minions key on the Salt-Master
 --------------------------------------------
